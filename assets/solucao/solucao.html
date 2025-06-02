@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.R.C.A. - Simulação de Alertas</title>
+  <link rel="stylesheet" href="../css/page/solucao.css" />
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <h1>A.R.C.A.</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="botoes-simulacao">
+      <button onclick="simular('enchente')">Simular Enchente</button>
+      <button onclick="simular('chuva')">Simular Chuva Forte</button>
+      <button onclick="simular('calor')">Simular Calor Extremo</button>
+    </div>
+
+    <div class="alert-box" id="mensagem-alerta">
+      Nenhum alerta no momento.
+    </div>
+
+    <div class="apoio-card">
+      <div class="apoio-header">
+        <span class="emoji">📍</span>
+        <h2>Ponto de Apoio</h2>
+      </div>
+      <h3 id="nome-escola">Nenhum ponto selecionado</h3>
+      <p id="endereco">---</p>
+      <img src="assets/img/sem_alerta.png" alt="Mapa" class="mapa" id="mapa-imagem">
+    </div>
+  </main>
+
+  <footer>
+    <p>A.R.C.A. © 2025 - Projeto Acadêmico</p>
+  </footer>
+
+  <script src="../js/solucao.js"></script>
+</body>
+</html>
