@@ -1,4 +1,42 @@
-function simular(tipo) {
+const usuarios = [
+  { nome: "Samuel Plaça", desastre: "alagamento", lat: -23.5505, lon: -46.6333 },
+  { nome: "Ana Sophia Araújo", desastre: "vento", lat: -23.5575, lon: -46.6603 },
+  { nome: "Enzo Castro", desastre: "enchente", lat: -25.9653, lon: 32.5892 },
+  { nome: "Aiko Ribeiro", desastre: "calor", lat: 48.8566, lon: 2.3522 }
+];
+
+const pontosApoio = [
+  { nome: "Centro Comunitário Paulista", lat: -23.5505, lon: -46.6333 },
+  { nome: "Igreja de São Paulo", lat: -23.5605, lon: -46.6533 },
+  { nome: "Escola Primária Maputo", lat: -25.9753, lon: 32.5992 },
+  { nome: "Centro Cultural Paris 14", lat: 48.9566, lon: 2.4522 }
+];
+
+function calcularDistancia(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2 +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
+function encontrarPontoMaisProximo(usuario, pontos) {
+  let menor = Infinity;
+  let pontoProximo = null;
+  pontos.forEach(p => {
+    const dist = calcularDistancia(usuario.lat, usuario.lon, p.lat, p.lon);
+    if (dist < menor) {
+      menor = dist;
+      pontoProximo = p;
+    }
+  });
+  return pontoProximo;
+}
+
+function simular(tipo = 'nenhum') {
   const alerta = document.getElementById('mensagem-alerta');
   const icone = document.getElementById('icone-alerta');
   const texto = document.getElementById('texto-alerta');
@@ -6,70 +44,79 @@ function simular(tipo) {
   const endereco = document.getElementById('endereco');
   const mapa = document.getElementById('mapa-imagem');
 
-  switch (tipo) {
-    case 'enchente':
-      icone.src = '../img/icones/chuva-icon.png';
-      texto.textContent = 'Atenção: enchente detectada nas proximidades! Evite áreas alagadas e dirija-se ao ponto de apoio mais próximo, se necessário.';
-      alerta.style.backgroundColor = '#fdecea';
-      alerta.style.color = '#b71c1c';
-      nome.textContent = 'Escola Municipal São Pedro';
-      endereco.innerHTML = 'Rua das Palmeiras, 123<br>(11) 91234-5678';
-      mapa.src = 'assets/img/mapa_enchente.png';
-      mapa.classList.remove('oculto');
-      break;
+  const configuracoes = {
+    enchente: {
+      icone: '../img/icones/chuva-icon.png',
+      cor: '#b71c1c',
+      bg: '#fdecea',
+      mensagem: 'Atenção: enchente detectada nas proximidades! Evite áreas alagadas e dirija-se ao ponto de apoio mais próximo, se necessário.'
+    },
+    alagamento: {
+      icone: '../img/icones/chuva-icon.png',
+      cor: '#0d47a1',
+      bg: '#e3f2fd',
+      mensagem: 'Alagamento identificado na sua região! Evite transitar por vias inundadas e procure abrigo seguro em um ponto de apoio, se precisar.'
+    },
+    calor: {
+      icone: '../img/icones/fever.png',
+      cor: '#c62828',
+      bg: '#ffebee',
+      mensagem: 'Alerta de calor extremo: hidrate-se com frequência e evite exposição ao sol. Se estiver passando mal, procure imediatamente o ponto de apoio mais próximo.'
+    },
+    vento: {
+      icone: '../img/icones/ventos-icon.png',
+      cor: '#4a148c',
+      bg: '#ede7f6',
+      mensagem: 'Alerta de ventos fortes: evite áreas abertas e fique longe de árvores e estruturas instáveis.'
+    },
+    nenhum: {
+      icone: '../img/icones/clear-sky.png',
+      cor: '#2e7d32',
+      bg: '#c8e6c9',
+      mensagem: 'Nenhum alerta no momento.'
+    }
+  };
 
-    case 'alagamento':
-      icone.src = '../img/icones/chuva-icon.png';
-      texto.textContent = 'Alagamento identificado na sua região! Evite transitar por vias inundadas e procure abrigo seguro em um ponto de apoio, se precisar.';
-      alerta.style.backgroundColor = '#e3f2fd';
-      alerta.style.color = '#0d47a1';
-      nome.textContent = 'Ginásio Poliesportivo Esperança';
-      endereco.innerHTML = 'Av. das Nuvens, 321<br>(11) 92345-6789';
-      mapa.src = 'assets/img/mapa_alagamento.png';
-      mapa.classList.remove('oculto');
-      break;
+  const conf = configuracoes[tipo];
 
-    case 'calor':
-      icone.src = '../img/icones/fever.png';
-      texto.textContent = 'Alerta de calor extremo: hidrate-se com frequência e evite exposição ao sol. Se estiver passando mal, procure imediatamente o ponto de apoio mais próximo.';
-      alerta.style.backgroundColor = '#ffebee';
-      alerta.style.color = '#c62828';
-      nome.textContent = 'Posto de Saúde Primavera';
-      endereco.innerHTML = 'Rua Flor do Campo, 789<br>(11) 98765-4321';
-      mapa.src = 'assets/img/mapa_calor.png';
-      mapa.classList.remove('oculto');
-      abrirModal(); // <-- chama o modal
-      break;
-
-
-
-    case 'vento':
-      icone.src = '../img/icones/ventos-icon.png';
-      texto.textContent = 'Alerta de ventos fortes: evite áreas abertas e fique longe de árvores e estruturas instáveis.';
-      alerta.style.backgroundColor = '#ede7f6';
-      alerta.style.color = '#4a148c';
-      nome.textContent = 'Escola Técnica Ventos do Sul';
-      endereco.innerHTML = 'Av. Liberdade, 999<br>(11) 93456-7890';
-      mapa.src = 'assets/img/mapa_vento.png';
-      mapa.classList.remove('oculto');
-      break;
-
-    default:
-      icone.src = '../img/icones/clear-sky.png';
-      texto.textContent = 'Nenhum alerta no momento.';
-      alerta.style.backgroundColor = '#c8e6c9';
-      alerta.style.color = '#2e7d32';
-      nome.textContent = 'Nenhum ponto selecionado';
-      endereco.innerHTML = '---';
-      mapa.src = 'assets/img/sem_alerta.png';
-      mapa.classList.add('oculto');
-      break;
+  if (tipo === 'nenhum' || !conf) {
+    icone.src = configuracoes.nenhum.icone;
+    texto.textContent = configuracoes.nenhum.mensagem;
+    alerta.style.backgroundColor = configuracoes.nenhum.bg;
+    alerta.style.color = configuracoes.nenhum.cor;
+    nome.textContent = 'Nenhum ponto selecionado';
+    endereco.innerHTML = '---';
+    mapa.src = 'assets/img/sem_alerta.png';
+    mapa.classList.add('oculto');
+    alerta.classList.add('ativo');
+    return;
   }
+
+  const usuario = usuarios.find(u => u.desastre === tipo);
+  const apoio = encontrarPontoMaisProximo(usuario, pontosApoio);
+
+  if (!usuario || !apoio) {
+    texto.textContent = "Dados não encontrados.";
+    return;
+  }
+
+  icone.src = conf.icone;
+  texto.textContent = conf.mensagem;
+  alerta.style.backgroundColor = conf.bg;
+  alerta.style.color = conf.cor;
+  nome.textContent = apoio.nome;
+  endereco.innerHTML = `Local sugerido com base em sua localização.<br>Lat: ${apoio.lat.toFixed(4)}<br>Lon: ${apoio.lon.toFixed(4)}`;
+mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXXXXXXXXXEXEMPLO&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
+
+  mapa.classList.remove('oculto');
+
+  if (tipo === 'calor') abrirModal();
 
   alerta.classList.add('ativo');
 }
+
 window.addEventListener('DOMContentLoaded', () => {
-  simular(); // sem parâmetro, cai no "default"
+  simular(); // sem parâmetro, mostra "Nenhum alerta"
 });
 
 function abrirModal() {
@@ -94,7 +141,6 @@ function calcularAgua() {
   }
 }
 
-// Fecha modal clicando fora do conteúdo
 window.addEventListener('click', function (e) {
   const modal = document.getElementById('modal-agua');
   if (e.target === modal) fecharModal();

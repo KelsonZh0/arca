@@ -32,7 +32,8 @@
 
       <h3 id="nome-escola">Nenhum ponto selecionado</h3>
       <p id="endereco">---</p>
-      <img src="assets/img/sem_alerta.png" alt="Mapa" class="mapa" id="mapa-imagem">
+<iframe id="mapa-imagem" class="mapa" width="100%" height="250" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </div>
 
     <div class="botoes-simulacao">
@@ -41,10 +42,6 @@
       <button onclick="simular('calor')">Simular Calor Extremo</button>
       <button onclick="simular('vento')">Simular Ventos Fortes</button>
     </div>
-
-    <div class="apoio-card" id="rota"></div>
-
-
   </main>
 
   <div id="modal-agua" class="modal oculto">
@@ -73,7 +70,6 @@
   </footer>
 
   <script src="../js/solucao.js"></script>
-  <script src="../js/rota.js"></script>
 
 </body>
 
