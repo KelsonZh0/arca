@@ -105,7 +105,8 @@ function simular(tipo = 'nenhum') {
   alerta.style.backgroundColor = conf.bg;
   alerta.style.color = conf.cor;
   nome.textContent = apoio.nome;
-  endereco.innerHTML = `Local sugerido com base em sua localização.<br>Lat: ${apoio.lat.toFixed(4)}<br>Lon: ${apoio.lon.toFixed(4)}`;
+const distancia = calcularDistancia(usuario.lat, usuario.lon, apoio.lat, apoio.lon).toFixed(2);
+endereco.innerHTML = `O ponto de apoio mais próximo é <strong>${apoio.nome}</strong>, a aproximadamente <strong>${distancia} km</strong> de distância da sua localização.`;
 mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyByteZ_u1h_qeQTE-bgaNT1K0my9LxS86g&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
 
   mapa.classList.remove('oculto');
