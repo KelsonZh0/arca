@@ -1,686 +1,914 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/page/login.css">
-    <link rel="stylesheet" href="assets/css/page/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/page/login.css" />
+    <link rel="stylesheet" href="assets/css/page/index.css" />
 
     <title>Pagina inicial A.R.C.A</title>
     <script src="assets/js/index.js"></script>
     <script defer src="assets/js/login.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/img/icones/arca.png" alt="Logo A.R.C.A" />
-            </a>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/icones/arca.png" alt="Logo A.R.C.A" />
+        </a>
+      </div>
+
+      <div class="profile">
+        <h2>Olá, <span id="nome-usuario">Visitante</span>!</h2>
+        <div class="logout-wrapper">
+          <button id="btn-logout" class="btn-logout">Sair</button>
         </div>
+      </div>
 
-        <div class="profile">
-            <h2>Olá, <span id="nome-usuario">Visitante</span>!</h2>
-            <div class="logout-wrapper">
-                <button id="btn-logout" class="btn-logout">Sair</button>
-            </div>
-        </div>
-
-
-
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="assets/integrantes/integrantes.html">Integrantes</a></li>
-                <li><a href="assets/contatos/contatos.html">Contatos</a></li>
-                <li><a href="assets/faq/faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="assets/integrantes/integrantes.html">Integrantes</a></li>
+          <li><a href="assets/contatos/contatos.html">Contatos</a></li>
+          <li><a href="assets/faq/faq.html">FAQ</a></li>
+          <li><a href="assets/solucao/solucao.html">Solução</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="container">
-            <h3 class="home-title">Bem-vindo à A.R.C.A.</h3>
-            <p class="home-description">
-                A.R.C.A. (Alerta de Risco Climático e Apoio) é um aplicativo inteligente que oferece suporte preventivo
-                e emergencial em situações climáticas extremas como alagamentos, enchentes, ventos fortes e ondas de
-                calor. Nossa missão é proteger vidas com informação, orientação e ação rápida.
-            </p>
+      <div class="container">
+        <h3 class="home-title">Bem-vindo à A.R.C.A.</h3>
+        <p class="home-description">
+          A.R.C.A. (Alerta de Risco Climático e Apoio) é um aplicativo
+          inteligente que oferece suporte preventivo e emergencial em situações
+          climáticas extremas como alagamentos, enchentes, ventos fortes e ondas
+          de calor. Nossa missão é proteger vidas com informação, orientação e
+          ação rápida.
+        </p>
+      </div>
+
+      <section class="alerta-section">
+        <h3 class="alerta-title">A importância de estar preparado</h3>
+        <p class="alerta-description">
+          Mudanças climáticas e eventos extremos estão se tornando parte da
+          nossa realidade. Muitas vezes, os riscos não dão aviso prévio. Por
+          isso, cultivar o hábito de se informar, planejar rotas seguras,
+          conhecer os sinais de alerta e saber como agir é uma atitude que pode
+          salvar vidas.
+          <br /><br />
+          Estar preparado não é exagero, é responsabilidade. Cada ação
+          preventiva é um passo rumo a uma comunidade mais segura, consciente e
+          resiliente.
+          <br /><br />
+          Para saber mais sobre como se proteger em diferentes situações, clique
+          nos cards abaixo. Eles contêm orientações específicas sobre desastres
+          como alagamentos, enchentes, ventos fortes e calor extremo.
+        </p>
+      </section>
+
+      <section class="info-cards">
+        <figure class="card" data-alvo="alagamento">
+          <img src="./assets/img/desastres/alagamento.png" alt="Alagamentos" />
+          <figcaption>Alagamento</figcaption>
+        </figure>
+
+        <figure class="card" data-alvo="enchente">
+          <img src="./assets/img/desastres/enchente.png" alt="Enchentes" />
+          <figcaption>Enchente</figcaption>
+        </figure>
+
+        <figure class="card" data-alvo="ventos-fortes">
+          <img
+            src="./assets/img/desastres/ventos-fortes.png"
+            alt="Ventos fortes"
+          />
+          <figcaption>Ventos fortes</figcaption>
+        </figure>
+
+        <figure class="card" data-alvo="calor-extremo">
+          <img
+            src="./assets/img/desastres/calor-extremo.png"
+            alt="Calor extremo"
+          />
+          <figcaption>Calor extremo</figcaption>
+        </figure>
+      </section>
+
+      <section id="alagamento" class="detalhe-desastre oculto">
+        <div class="card-conteudo">
+          <h2>
+            <img
+              src="assets/img/icones/algamento-icon.png"
+              alt="Ícone de alagamento"
+              class="icone-titulo"
+            />
+            Alagamentos: Saiba como se Proteger
+          </h2>
+
+          <h3>
+            <img
+              src="assets/img/icones/livro-icon.png"
+              alt="Ícone de um livro"
+              class="icone-titulo"
+            />
+            O que são alagamentos?
+          </h3>
+          <p>
+            Alagamentos acontecem quando o acúmulo de água das chuvas não escoa
+            adequadamente, provocando a inundação temporária de ruas, calçadas e
+            até imóveis. Geralmente são causados por:
+          </p>
+          <ul>
+            <li>
+              <p>Chuvas fortes em curto espaço de tempo</p>
+            </li>
+            <li>
+              <p>Obstrução de bueiros ou galerias pluviais</p>
+            </li>
+            <li>
+              <p>Impermeabilização do solo nas cidades (asfalto, concreto)</p>
+            </li>
+            <li>
+              <p>Má conservação das redes de drenagem</p>
+            </li>
+          </ul>
+
+          <h3>
+            <img
+              src="assets/img/icones/alarme-icon.png"
+              alt="Riscos"
+              class="icone-titulo"
+            />
+            Principais Riscos
+          </h3>
+          <ul>
+            <li>
+              <p>Afogamentos em ruas encobertas por água</p>
+            </li>
+            <li>
+              <p>
+                Contato com água contaminada (esgoto, lixo, produtos químicos)
+              </p>
+            </li>
+            <li>
+              <p>Choques elétricos e quedas de energia</p>
+            </li>
+            <li>
+              <p>Danos a veículos e residências</p>
+            </li>
+            <li>
+              <p>Interrupção de serviços como transporte e coleta de lixo</p>
+            </li>
+            <li>
+              <p>
+                Doenças de veiculação hídrica, como leptospirose e hepatite A
+              </p>
+            </li>
+          </ul>
+
+          <h3>
+            <img
+              src="assets/img/icones/visto-icon.png"
+              alt="Prevenção"
+              class="icone-titulo"
+            />
+            Antes do Alagamento: Como se Prevenir
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Instale válvulas de retenção em ralos e vasos sanitários para
+                evitar o refluxo de esgoto
+              </p>
+            </li>
+            <li>
+              <p>
+                Eleve eletrodomésticos e móveis em áreas propensas a alagamento
+              </p>
+            </li>
+            <li>
+              <p>
+                Utilize barreiras de contenção (sacarias de areia ou placas
+                plásticas) em portas e garagens
+              </p>
+            </li>
+            <li>
+              <p>
+                Mantenha documentos e objetos importantes em locais altos e
+                protegidos
+              </p>
+            </li>
+            <li>
+              <p>Nunca descarte lixo ou entulho em ruas, calçadas ou bueiros</p>
+            </li>
+            <li>
+              <p>Participe de mutirões de limpeza comunitária</p>
+            </li>
+            <li>
+              <p>
+                Comunique obstruções ou buracos à prefeitura/local responsável
+              </p>
+            </li>
+          </ul>
+
+          <h3>
+            <img
+              src="assets/img/icones/chuva-icon.png"
+              alt="Durante"
+              class="icone-titulo"
+            />
+            Durante o Alagamento: Como Agir
+          </h3>
+          <strong>Se estiver em casa:</strong>
+          <ul>
+            <li>
+              <p>Desligue o quadro de energia e feche o registro de gás</p>
+            </li>
+            <li>
+              <p>Suba para andares superiores ou lugares elevados</p>
+            </li>
+            <li>
+              <p>
+                Evite contato com a água (risco de infecção, choque, objetos
+                cortantes)
+              </p>
+            </li>
+          </ul>
+
+          <strong>Se estiver fora de casa:</strong>
+          <ul>
+            <li>
+              <p>Não tente atravessar alagamentos, mesmo que pareçam rasos</p>
+            </li>
+            <li>
+              <p>Mantenha-se longe de postes, árvores e fios expostos</p>
+            </li>
+            <li>
+              <p>
+                Se estiver de carro, não insista em atravessar ruas com água
+                acumulada
+              </p>
+            </li>
+          </ul>
+
+          <h3>
+            <img
+              src="assets/img/icones/sol-nuvem-icon.png"
+              alt="Após"
+              class="icone-titulo"
+            />
+            Após o Alagamento
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Aguarde a liberação das autoridades antes de retornar ao local
+              </p>
+            </li>
+            <li>
+              <p>Utilize botas, luvas e máscaras para fazer a limpeza</p>
+            </li>
+            <li>
+              <p>Descarte objetos e alimentos contaminados pela água</p>
+            </li>
+            <li>
+              <p>
+                Ferva a água para consumo ou use cloro conforme orientação
+                sanitária
+              </p>
+            </li>
+            <li>
+              <p>
+                Documente perdas e entre em contato com a Defesa Civil (199) ou
+                órgão municipal
+              </p>
+            </li>
+          </ul>
+
+          <button class="btn-fechar">Fechar</button>
         </div>
+      </section>
 
-        <section class="alerta-section">
-            <h3 class="alerta-title">A importância de estar preparado</h3>
-            <p class="alerta-description">
-                Mudanças climáticas e eventos extremos estão se tornando parte da nossa realidade. Muitas vezes, os
-                riscos não dão aviso prévio. Por isso, cultivar o hábito de se informar, planejar rotas seguras,
-                conhecer os sinais de alerta e saber como agir é uma atitude que pode salvar vidas.
-                <br><br>
-                Estar preparado não é exagero — é responsabilidade. Cada ação preventiva é um passo rumo a uma
-                comunidade mais segura, consciente e resiliente.
-                <br><br>
-                Para saber mais sobre como se proteger em diferentes situações, clique nos cards abaixo.
-                Eles contêm orientações específicas sobre desastres como alagamentos, enchentes, ventos fortes e calor
-                extremo.
-            </p>
-        </section>
+      <section id="enchente" class="detalhe-desastre oculto">
+        <div class="card-conteudo">
+          <h2>
+            <img
+              src="assets/img/icones/enchente-icon.png"
+              alt="Ícone de enchente"
+              class="icone-titulo"
+            />
+            Enchentes: Saiba como se Proteger
+          </h2>
 
-        <section class="info-cards">
-            <figure class="card" data-alvo="alagamento">
-                <img src="./assets/img/desastres/alagamento.png" alt="Alagamentos">
-                <figcaption>Alagamento</figcaption>
-            </figure>
+          <h3>
+            <img
+              src="assets/img/icones/livro-icon.png"
+              alt="Ícone de um livro"
+              class="icone-titulo"
+            />
+            O que são Enchentes?
+          </h3>
+          <p>
+            Enchentes ocorrem quando o volume de água sobe acima do nível
+            normal, invadindo ruas, casas, terrenos e prejudicando o
+            deslocamento e a segurança das pessoas. Costumam ser causadas por:
+          </p>
+          <ul>
+            <li>
+              <p>Chuvas intensas contínuas</p>
+            </li>
+            <li>
+              <p>Entupimento de bueiros e drenagens</p>
+            </li>
+            <li>
+              <p>Transbordamento de rios e córregos</p>
+            </li>
+          </ul>
 
-            <figure class="card" data-alvo="enchente">
-                <img src="./assets/img/desastres/enchente.png" alt="Enchentes">
-                <figcaption>Enchente</figcaption>
-            </figure>
+          <h3>
+            <img
+              src="assets/img/icones/alarme-icon.png"
+              alt="Riscos"
+              class="icone-titulo"
+            />
+            Principais Riscos
+          </h3>
+          <ul>
+            <li>
+              <p>Afogamento</p>
+            </li>
+            <li>
+              <p>Doenças infecciosas (leptospirose, hepatite A, diarreias)</p>
+            </li>
+            <li>
+              <p>Perda de bens materiais</p>
+            </li>
+            <li>
+              <p>Contaminação da água potável</p>
+            </li>
+            <li>
+              <p>Riscos elétricos (choques, curtos)</p>
+            </li>
+            <li>
+              <p>
+                Interrupção de serviços públicos (energia, transporte, saúde)
+              </p>
+            </li>
+          </ul>
 
-            <figure class="card" data-alvo="ventos-fortes">
-                <img src="./assets/img/desastres/ventos-fortes.png" alt="Ventos fortes">
-                <figcaption>Ventos fortes</figcaption>
-            </figure>
+          <h3>
+            <img
+              src="assets/img/icones/visto-icon.png"
+              alt="Prevenção"
+              class="icone-titulo"
+            />
+            Antes da Enchente: Como se Prevenir
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Eleve móveis e eletrodomésticos em locais propensos a
+                alagamento.
+              </p>
+            </li>
+            <li>
+              <p>Guarde documentos em sacos plásticos e lugares altos.</p>
+            </li>
+            <li>
+              <p>
+                Verifique e limpe calhas, ralos, bueiros próximos e caixas
+                d'água.
+              </p>
+            </li>
 
-            <figure class="card" data-alvo="calor-extremo">
-                <img src="./assets/img/desastres/calor-extremo.png" alt="Calor extremo">
-                <figcaption>Calor extremo</figcaption>
-            </figure>
-        </section>
+            <li>
+              <p>Não jogue lixo nas ruas ou bueiros.</p>
+            </li>
+            <li>
+              <p>
+                Organize mutirões de limpeza e comunicação com a prefeitura.
+              </p>
+            </li>
+            <li>
+              <p>Acompanhe previsões climáticas e alertas da Defesa Civil.</p>
+            </li>
+          </ul>
 
+          <h3>
+            <img
+              src="assets/img/icones/chuva-icon.png"
+              alt="Durante"
+              class="icone-titulo"
+            />
+            Durante a Enchente: Como Agir
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Desligue a energia elétrica e o gás, se houver risco de
+                alagamento.
+              </p>
+            </li>
+            <li>
+              <p>Suba para andares superiores ou pontos altos.</p>
+            </li>
+            <li>
+              <p>
+                Evite contato com a água da enchente (pode estar contaminada).
+              </p>
+            </li>
+            <li>
+              <p>
+                Evite áreas alagadas – apenas 30 cm de água podem arrastar um
+                carro.
+              </p>
+            </li>
+            <li>
+              <p>Não caminhe em correntezas ou tente atravessar.</p>
+            </li>
+            <li>
+              <p>
+                Se estiver em veículo, pare em local seguro e espere a água
+                baixar.
+              </p>
+            </li>
+          </ul>
 
-        <section id="alagamento" class="detalhe-desastre oculto">
-            <div class="card-conteudo">
-                <h2>
-                    <img src="assets/img/icones/algamento-icon.png" alt="Ícone de alagamento" class="icone-titulo">
-                    Alagamentos: Saiba como se Proteger
-                </h2>
+          <h3>
+            <img
+              src="assets/img/icones/sol-nuvem-icon.png"
+              alt="Após"
+              class="icone-titulo"
+            />
+            Após a Enchente
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Evite retornar até que as autoridades deem o sinal de segurança.
+              </p>
+            </li>
+            <li>
+              <p>Use botas e luvas ao limpar a casa.</p>
+            </li>
+            <li>
+              <p>
+                Jogue fora alimentos e objetos que tiveram contato com a água
+                suja.
+              </p>
+            </li>
+            <li>
+              <p>Ferva a água antes de beber e desinfete ambientes.</p>
+            </li>
+            <li>
+              <p>Denuncie danos à Defesa Civil e registre perdas.</p>
+            </li>
+          </ul>
 
-                <h3>
-                    <img src="assets/img/icones/livro-icon.png" alt="Ícone de um livro" class="icone-titulo">
-                    O que são alagamentos?
-                </h3>
-                <p>Alagamentos acontecem quando o acúmulo de água das chuvas não escoa adequadamente, provocando a
-                    inundação temporária de ruas, calçadas e até imóveis. Geralmente são causados por:</p>
-                <ul>
-                    <li>
-                        <p>Chuvas fortes em curto espaço de tempo</p>
-                    </li>
-                    <li>
-                        <p>Obstrução de bueiros ou galerias pluviais</p>
-                    </li>
-                    <li>
-                        <p>Impermeabilização do solo nas cidades (asfalto, concreto)</p>
-                    </li>
-                    <li>
-                        <p>Má conservação das redes de drenagem</p>
-                    </li>
-                </ul>
+          <button class="btn-fechar">Fechar</button>
+        </div>
+      </section>
 
-                <h3>
-                    <img src="assets/img/icones/alarme-icon.png" alt="Riscos" class="icone-titulo">
-                    Principais Riscos
-                </h3>
-                <ul>
-                    <li>
-                        <p>Afogamentos em ruas encobertas por água</p>
-                    </li>
-                    <li>
-                        <p>Contato com água contaminada (esgoto, lixo, produtos químicos)</p>
-                    </li>
-                    <li>
-                        <p>Choques elétricos e quedas de energia</p>
-                    </li>
-                    <li>
-                        <p>Danos a veículos e residências</p>
-                    </li>
-                    <li>
-                        <p>Interrupção de serviços como transporte e coleta de lixo</p>
-                    </li>
-                    <li>
-                        <p>Doenças de veiculação hídrica, como leptospirose e hepatite A</p>
-                    </li>
-                </ul>
+      <section id="ventos-fortes" class="detalhe-desastre oculto">
+        <div class="card-conteudo">
+          <h2>
+            <img
+              src="assets/img/icones/ventos-icon.png"
+              alt="Ícone de vento"
+              class="icone-titulo"
+            />
+            Ventos Fortes: Saiba como se Proteger
+          </h2>
 
-                <h3>
-                    <img src="assets/img/icones/visto-icon.png" alt="Prevenção" class="icone-titulo">
-                    Antes do Alagamento: Como se Prevenir
-                </h3>
-                <ul>
-                    <li>
-                        <p>Instale válvulas de retenção em ralos e vasos sanitários para evitar o refluxo de esgoto</p>
-                    </li>
-                    <li>
-                        <p>Eleve eletrodomésticos e móveis em áreas propensas a alagamento</p>
-                    </li>
-                    <li>
-                        <p>Utilize barreiras de contenção (sacarias de areia ou placas plásticas) em portas e garagens
-                        </p>
-                    </li>
-                    <li>
-                        <p>Mantenha documentos e objetos importantes em locais altos e protegidos</p>
-                    </li>
-                    <li>
-                        <p>Nunca descarte lixo ou entulho em ruas, calçadas ou bueiros</p>
-                    </li>
-                    <li>
-                        <p>Participe de mutirões de limpeza comunitária</p>
-                    </li>
-                    <li>
-                        <p>Comunique obstruções ou buracos à prefeitura/local responsável</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/livro-icon.png"
+              alt="Ícone de um livro"
+              class="icone-titulo"
+            />
+            O que são ventos fortes?
+          </h3>
+          <p>
+            Ventos fortes são rajadas de ar com velocidades elevadas, geralmente
+            acima de 60 km/h, causadas por tempestades, frentes frias, ciclones
+            extratropicais ou outros sistemas atmosféricos. Podem provocar
+            destelhamentos, quedas de árvores e postes, e interrupção de
+            energia.
+          </p>
 
-                <h3>
-                    <img src="assets/img/icones/chuva-icon.png" alt="Durante" class="icone-titulo">
-                    Durante o Alagamento: Como Agir
-                </h3>
-                <strong>Se estiver em casa:</strong>
-                <ul>
-                    <li>
-                        <p>Desligue o quadro de energia e feche o registro de gás</p>
-                    </li>
-                    <li>
-                        <p>Suba para andares superiores ou lugares elevados</p>
-                    </li>
-                    <li>
-                        <p>Evite contato com a água (risco de infecção, choque, objetos cortantes)</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/alarme-icon.png"
+              alt="Riscos"
+              class="icone-titulo"
+            />
+            Principais Riscos
+          </h3>
+          <ul>
+            <li>
+              <p>Destelhamento de casas, escolas e comércios</p>
+            </li>
+            <li>
+              <p>Queda de árvores, postes e fiações elétricas</p>
+            </li>
+            <li>
+              <p>Objetos soltos se tornando projéteis perigosos</p>
+            </li>
+            <li>
+              <p>Danos a veículos, janelas e fachadas</p>
+            </li>
+            <li>
+              <p>Interrupção de energia elétrica e serviços</p>
+            </li>
+            <li>
+              <p>
+                Acidentes com estruturas frágeis (tendas, andaimes, coberturas)
+              </p>
+            </li>
+          </ul>
 
-                <strong>Se estiver fora de casa:</strong>
-                <ul>
-                    <li>
-                        <p>Não tente atravessar alagamentos, mesmo que pareçam rasos</p>
-                    </li>
-                    <li>
-                        <p>Mantenha-se longe de postes, árvores e fios expostos</p>
-                    </li>
-                    <li>
-                        <p>Se estiver de carro, não insista em atravessar ruas com água acumulada</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/visto-icon.png"
+              alt="Prevenção"
+              class="icone-titulo"
+            />
+            Antes do Vendaval: Como se Prevenir
+          </h3>
 
-                <h3>
-                    <img src="assets/img/icones/sol-nuvem-icon.png" alt="Após" class="icone-titulo">
-                    Após o Alagamento
-                </h3>
-                <ul>
-                    <li>
-                        <p>Aguarde a liberação das autoridades antes de retornar ao local</p>
-                    </li>
-                    <li>
-                        <p>Utilize botas, luvas e máscaras para fazer a limpeza</p>
-                    </li>
-                    <li>
-                        <p>Descarte objetos e alimentos contaminados pela água</p>
-                    </li>
-                    <li>
-                        <p>Ferva a água para consumo ou use cloro conforme orientação sanitária</p>
-                    </li>
-                    <li>
-                        <p>Documente perdas e entre em contato com a Defesa Civil (199) ou órgão municipal</p>
-                    </li>
-                </ul>
+          <ul>
+            <li>
+              <p>Reforce telhados e calhas com parafusos e fitas próprias</p>
+            </li>
+            <li>
+              <p>
+                Retire ou prenda objetos soltos (vasos, lixeiras, antenas,
+                toldos)
+              </p>
+            </li>
+            <li>
+              <p>Feche bem portas e janelas, e afaste móveis de vidro</p>
+            </li>
+            <li>
+              <p>Evite pendurar varais ou antenas metálicas soltas</p>
+            </li>
+            <li>
+              <p>Não estacione sob árvores, outdoors ou fiações</p>
+            </li>
+            <li>
+              <p>
+                Evite deixar entulho, materiais de obra ou lixo em local aberto
+              </p>
+            </li>
+            <li>
+              <p>
+                Comunique à prefeitura ou Defesa Civil sobre estruturas
+                instáveis
+              </p>
+            </li>
+          </ul>
+          <h3>
+            <img
+              src="assets/img/icones/vento-icon.png"
+              alt="icone de vento"
+              class="icone-titulo"
+            />Durante os Ventos Fortes: Como Agir
+          </h3>
+          <strong>Se estiver em casa:</strong>
+          <ul>
+            <li>
+              <p>Mantenha-se longe de janelas e vidros</p>
+            </li>
+            <li>
+              <p>
+                Evite usar aparelhos elétricos e desligue o disjuntor se
+                necessário
+              </p>
+            </li>
+            <li>
+              <p>
+                Acomode-se em locais protegidos e não tente subir no telhado
+              </p>
+            </li>
+            <li>
+              <p>
+                Se o telhado for arrancado, busque abrigo em outro cômodo
+                protegido
+              </p>
+            </li>
+          </ul>
 
-                <button class="btn-fechar">Fechar</button>
-            </div>
-        </section>
+          <strong>Se estiver na rua:</strong>
+          <ul>
+            <li>
+              <p>Procure abrigo seguro imediatamente</p>
+            </li>
+            <li>
+              <p>Afaste-se de árvores, placas, fiações e muros frágeis</p>
+            </li>
+            <li>
+              <p>Nunca toque em fios caídos — risco de choque elétrico</p>
+            </li>
+            <li>
+              <p>Evite andar de moto ou bicicleta em locais abertos</p>
+            </li>
+          </ul>
 
+          <h3>
+            <img
+              src="assets/img/icones/sol-nuvem-icon.png"
+              alt="Após"
+              class="icone-titulo"
+            />
+            Após os Ventos Fortes
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Verifique com segurança os danos — não toque em cabos rompidos
+              </p>
+            </li>
+            <li>
+              <p>
+                Reforce partes danificadas da casa antes de novas tempestades
+              </p>
+            </li>
+            <li>
+              <p>
+                Registre os danos com fotos para solicitar apoio à Defesa Civil
+              </p>
+            </li>
+            <li>
+              <p>Participe da limpeza da comunidade com os devidos cuidados</p>
+            </li>
+            <li>
+              <p>
+                Evite acúmulo de lixo ou galhos — isso pode agravar futuros
+                desastres
+              </p>
+            </li>
+          </ul>
 
-        <section id="enchente" class="detalhe-desastre oculto">
-            <div class="card-conteudo">
-                <h2>
-                    <img src="assets/img/icones/enchente-icon.png" alt="Ícone de enchente" class="icone-titulo">
-                    Enchentes: Saiba como se Proteger
-                </h2>
+          <button class="btn-fechar">Fechar</button>
+        </div>
+      </section>
 
-                <h3>
-                    <img src="assets/img/icones/livro-icon.png" alt="Ícone de um livro" class="icone-titulo">
-                    O que são Enchentes?
-                </h3>
-                <p>Enchentes ocorrem quando o volume de água sobe acima do nível normal, invadindo ruas, casas, terrenos
-                    e prejudicando o deslocamento e a segurança das pessoas. Costumam ser causadas por:</p>
-                <ul>
-                    <li>
-                        <p>Chuvas intensas contínuas</p>
-                    </li>
-                    <li>
-                        <p>Entupimento de bueiros e drenagens</p>
-                    </li>
-                    <li>
-                        <p>Transbordamento de rios e córregos</p>
-                    </li>
-                </ul>
+      <section id="calor-extremo" class="detalhe-desastre oculto">
+        <div class="card-conteudo">
+          <h2>
+            <img
+              src="assets/img/icones/calor-extremo-icon.png"
+              alt="Ícone de calor"
+              class="icone-titulo"
+            />
+            Calor Intenso: Saiba como se Proteger
+          </h2>
 
-                <h3>
-                    <img src="assets/img/icones/alarme-icon.png" alt="Riscos" class="icone-titulo">
-                    Principais Riscos
-                </h3>
-                <ul>
-                    <li>
-                        <p>Afogamento</p>
-                    </li>
-                    <li>
-                        <p>Doenças infecciosas (leptospirose, hepatite A, diarreias)</p>
-                    </li>
-                    <li>
-                        <p>Perda de bens materiais</p>
-                    </li>
-                    <li>
-                        <p>Contaminação da água potável</p>
-                    </li>
-                    <li>
-                        <p>Riscos elétricos (choques, curtos)</p>
-                    </li>
-                    <li>
-                        <p>Interrupção de serviços públicos (energia, transporte, saúde)</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/livro-icon.png"
+              alt="Ícone de um livro"
+              class="icone-titulo"
+            />
+            O que é uma onda de calor?
+          </h3>
+          <p>
+            Uma onda de calor ocorre quando as temperaturas ficam muito acima da
+            média por vários dias consecutivos. Combinada à baixa umidade do ar,
+            pode trazer sérios riscos à saúde e provocar incêndios, desidratação
+            e sobrecarga no sistema de energia.
+          </p>
 
-                <h3>
-                    <img src="assets/img/icones/visto-icon.png" alt="Prevenção" class="icone-titulo">
-                    Antes da Enchente: Como se Prevenir
-                </h3>
-                <ul>
-                    <li>
-                        <p>Eleve móveis e eletrodomésticos em locais propensos a alagamento.</p>
-                    </li>
-                    <li>
-                        <p>Guarde documentos em sacos plásticos e lugares altos.</p>
-                    </li>
-                    <li>
-                        <p>Verifique e limpe calhas, ralos, bueiros próximos e caixas d'água.</p>
-                    </li>
+          <h3>
+            <img
+              src="assets/img/icones/alarme-icon.png"
+              alt="Riscos"
+              class="icone-titulo"
+            />
+            Principais Riscos
+          </h3>
+          <ul>
+            <li>
+              <p>Desidratação e insolação</p>
+            </li>
+            <li>
+              <p>Agravamento de doenças respiratórias e cardíacas</p>
+            </li>
+            <li>
+              <p>Queimaduras e mal-estar por exposição direta ao sol</p>
+            </li>
+            <li>
+              <p>Desmaios, câimbras e exaustão térmica</p>
+            </li>
+            <li>
+              <p>Incêndios florestais e urbanos</p>
+            </li>
+            <li>
+              <p>Sobrecarga e falhas na rede elétrica</p>
+            </li>
+          </ul>
 
+          <h3>
+            <img
+              src="assets/img/icones/visto-icon.png"
+              alt="Prevenção"
+              class="icone-titulo"
+            />Antes e Durante o Calor Intenso: Como se Prevenir
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Mantenha os ambientes ventilados ou com ventiladores e
+                climatizadores
+              </p>
+            </li>
+            <li>
+              <p>
+                Feche janelas e cortinas nas horas mais quentes para reduzir o
+                aquecimento
+              </p>
+            </li>
+            <li>
+              <p>Evite o uso de muitos aparelhos elétricos ao mesmo tempo</p>
+            </li>
+            <li>
+              <p>Armazene água potável e alimentos em local fresco</p>
+            </li>
+          </ul>
 
-                    <li>
-                        <p>Não jogue lixo nas ruas ou bueiros.</p>
-                    </li>
-                    <li>
-                        <p>Organize mutirões de limpeza e comunicação com a prefeitura.</p>
-                    </li>
-                    <li>
-                        <p>Acompanhe previsões climáticas e alertas da Defesa Civil.</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/pessoas-icon.png"
+              alt="Icone de pessoas"
+              class="icone-titulo"
+            />Cuidados com o corpo
+          </h3>
+          <ul>
+            <li>
+              <p>Beba bastante água, mesmo sem sentir sede</p>
+            </li>
+            <li>
+              <p>Use roupas leves, claras e de algodão</p>
+            </li>
+            <li>
+              <p>Evite exercícios físicos entre 10h e 16h</p>
+            </li>
+            <li>
+              <p>Use chapéu, óculos escuros e protetor solar com fator alto</p>
+            </li>
+            <li>
+              <p>
+                Reforce a hidratação de crianças, idosos e animais de estimação
+              </p>
+            </li>
+          </ul>
 
-                <h3>
-                    <img src="assets/img/icones/chuva-icon.png" alt="Durante" class="icone-titulo">
-                    Durante a Enchente: Como Agir
-                </h3>
-                <ul>
-                    <li>
-                        <p>Desligue a energia elétrica e o gás, se houver risco de alagamento.</p>
-                    </li>
-                    <li>
-                        <p>Suba para andares superiores ou pontos altos.</p>
-                    </li>
-                    <li>
-                        <p>Evite contato com a água da enchente (pode estar contaminada).</p>
-                    </li>
-                    <li>
-                        <p>Evite áreas alagadas – apenas 30 cm de água podem arrastar um carro.</p>
-                    </li>
-                    <li>
-                        <p>Não caminhe em correntezas ou tente atravessar.</p>
-                    </li>
-                    <li>
-                        <p>Se estiver em veículo, pare em local seguro e espere a água baixar.</p>
-                    </li>
-                </ul>
+          <h3>
+            <img
+              src="assets/img/icones/sol-icon.png"
+              alt="Durante"
+              class="icone-titulo"
+            />Durante Ondas de Calor Extremas
+          </h3>
+          <strong>Se estiver em casa:</strong>
+          <ul>
+            <li>
+              <p>Mantenha-se em cômodos arejados ou escuros</p>
+            </li>
+            <li>
+              <p>
+                Reforce a ingestão de líquidos (água, sucos naturais, água de
+                coco)
+              </p>
+            </li>
+            <li>
+              <p>Tome banhos frios ou use compressas de água gelada</p>
+            </li>
+            <li>
+              <p>Evite refeições pesadas e comidas quentes</p>
+            </li>
+          </ul>
 
-                <h3>
-                    <img src="assets/img/icones/sol-nuvem-icon.png" alt="Após" class="icone-titulo">
-                    Após a Enchente
-                </h3>
-                <ul>
-                    <li>
-                        <p>Evite retornar até que as autoridades deem o sinal de segurança.</p>
-                    </li>
-                    <li>
-                        <p>Use botas e luvas ao limpar a casa.</p>
-                    </li>
-                    <li>
-                        <p>Jogue fora alimentos e objetos que tiveram contato com a água suja.</p>
-                    </li>
-                    <li>
-                        <p>Ferva a água antes de beber e desinfete ambientes.</p>
-                    </li>
-                    <li>
-                        <p>Denuncie danos à Defesa Civil e registre perdas.</p>
-                    </li>
-                </ul>
+          <strong>Se estiver na rua:</strong>
+          <ul>
+            <li>
+              <p>Busque locais com sombra, árvores ou áreas climatizadas</p>
+            </li>
+            <li>
+              <p>Use guarda-sol ou sombrinha</p>
+            </li>
+            <li>
+              <p>Evite andar longas distâncias sob o sol</p>
+            </li>
+          </ul>
 
-                <button class="btn-fechar">Fechar</button>
-            </div>
-        </section>
+          <h3>
+            <img
+              src="assets/img/icones/sol-nuvem-icon.png"
+              alt="Após"
+              class="icone-titulo"
+            />Após o Pico de Calor
+          </h3>
+          <ul>
+            <li>
+              <p>Continue se hidratando por alguns dias</p>
+            </li>
+            <li>
+              <p>
+                Revise instalações elétricas e eletrodomésticos que foram
+                sobrecarregados
+              </p>
+            </li>
+            <li>
+              <p>Reforce a ventilação da casa</p>
+            </li>
+            <li>
+              <p>
+                Fique atento à saúde de pessoas vulneráveis que possam ter
+                sofrido efeitos tardios
+              </p>
+            </li>
+          </ul>
 
-        <section id="ventos-fortes" class="detalhe-desastre oculto">
-            <div class="card-conteudo">
-                <h2>
-                    <img src="assets/img/icones/ventos-icon.png" alt="Ícone de vento" class="icone-titulo">
-                    Ventos Fortes: Saiba como se Proteger
-                </h2>
-
-                <h3>
-                    <img src="assets/img/icones/livro-icon.png" alt="Ícone de um livro" class="icone-titulo">
-                    O que são ventos fortes?
-                </h3>
-                <p>Ventos fortes são rajadas de ar com velocidades elevadas, geralmente acima de 60 km/h, causadas por
-                    tempestades, frentes frias, ciclones extratropicais ou outros sistemas atmosféricos. Podem provocar
-                    destelhamentos, quedas de árvores e postes, e interrupção de energia.</p>
-
-                <h3>
-                    <img src="assets/img/icones/alarme-icon.png" alt="Riscos" class="icone-titulo">
-                    Principais Riscos
-                </h3>
-                <ul>
-                    <li>
-                        <p>Destelhamento de casas, escolas e comércios</p>
-                    </li>
-                    <li>
-                        <p>Queda de árvores, postes e fiações elétricas</p>
-                    </li>
-                    <li>
-                        <p>Objetos soltos se tornando projéteis perigosos</p>
-                    </li>
-                    <li>
-                        <p>Danos a veículos, janelas e fachadas</p>
-                    </li>
-                    <li>
-                        <p>Interrupção de energia elétrica e serviços</p>
-                    </li>
-                    <li>
-                        <p>Acidentes com estruturas frágeis (tendas, andaimes, coberturas)</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/visto-icon.png" alt="Prevenção" class="icone-titulo">
-                    Antes do Vendaval: Como se Prevenir
-                </h3>
-
-                <ul>
-                    <li>
-                        <p>Reforce telhados e calhas com parafusos e fitas próprias</p>
-                    </li>
-                    <li>
-                        <p>Retire ou prenda objetos soltos (vasos, lixeiras, antenas, toldos)</p>
-                    </li>
-                    <li>
-                        <p>Feche bem portas e janelas, e afaste móveis de vidro</p>
-                    </li>
-                    <li>
-                        <p>Evite pendurar varais ou antenas metálicas soltas</p>
-                    </li>
-                    <li>
-                        <p>Não estacione sob árvores, outdoors ou fiações</p>
-                    </li>
-                    <li>
-                        <p>Evite deixar entulho, materiais de obra ou lixo em local aberto</p>
-                    </li>
-                    <li>
-                        <p>Comunique à prefeitura ou Defesa Civil sobre estruturas instáveis</p>
-                    </li>
-                </ul>
-                <h3>
-                    <img src="assets/img/icones/vento-icon.png" alt="icone de vento" class="icone-titulo">Durante os
-                    Ventos
-                    Fortes: Como Agir
-                </h3>
-                <strong>Se estiver em casa:</strong>
-                <ul>
-                    <li>
-                        <p>Mantenha-se longe de janelas e vidros</p>
-                    </li>
-                    <li>
-                        <p>Evite usar aparelhos elétricos e desligue o disjuntor se necessário</p>
-                    </li>
-                    <li>
-                        <p>Acomode-se em locais protegidos e não tente subir no telhado</p>
-                    </li>
-                    <li>
-                        <p>Se o telhado for arrancado, busque abrigo em outro cômodo protegido</p>
-                    </li>
-                </ul>
-
-                <strong>Se estiver na rua:</strong>
-                <ul>
-                    <li>
-                        <p>Procure abrigo seguro imediatamente</p>
-                    </li>
-                    <li>
-                        <p>Afaste-se de árvores, placas, fiações e muros frágeis</p>
-                    </li>
-                    <li>
-                        <p>Nunca toque em fios caídos — risco de choque elétrico</p>
-                    </li>
-                    <li>
-                        <p>Evite andar de moto ou bicicleta em locais abertos</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/sol-nuvem-icon.png" alt="Após" class="icone-titulo">
-                    Após os Ventos Fortes
-                </h3>
-                <ul>
-                    <li>
-                        <p>Verifique com segurança os danos — não toque em cabos rompidos</p>
-                    </li>
-                    <li>
-                        <p>Reforce partes danificadas da casa antes de novas tempestades</p>
-                    </li>
-                    <li>
-                        <p>Registre os danos com fotos para solicitar apoio à Defesa Civil</p>
-                    </li>
-                    <li>
-                        <p>Participe da limpeza da comunidade com os devidos cuidados</p>
-                    </li>
-                    <li>
-                        <p>Evite acúmulo de lixo ou galhos — isso pode agravar futuros desastres</p>
-                    </li>
-                </ul>
-
-                <button class="btn-fechar">Fechar</button>
-            </div>
-        </section>
-
-
-        <section id="calor-extremo" class="detalhe-desastre oculto">
-            <div class="card-conteudo">
-                <h2>
-                    <img src="assets/img/icones/calor-extremo-icon.png" alt="Ícone de calor" class="icone-titulo">
-                    Calor Intenso: Saiba como se Proteger
-                </h2>
-
-                <h3>
-                    <img src="assets/img/icones/livro-icon.png" alt="Ícone de um livro" class="icone-titulo">
-                    O que é uma onda de calor?
-                </h3>
-                <p>Uma onda de calor ocorre quando as temperaturas ficam muito acima da média por vários dias
-                    consecutivos. Combinada à baixa umidade do ar, pode trazer sérios riscos à saúde e provocar
-                    incêndios, desidratação e sobrecarga no sistema de energia.
-                </p>
-
-
-                <h3>
-                    <img src="assets/img/icones/alarme-icon.png" alt="Riscos" class="icone-titulo">
-                    Principais Riscos
-                </h3>
-                <ul>
-                    <li>
-                        <p>Desidratação e insolação</p>
-                    </li>
-                    <li>
-                        <p>Agravamento de doenças respiratórias e cardíacas</p>
-                    </li>
-                    <li>
-                        <p>Queimaduras e mal-estar por exposição direta ao sol</p>
-                    </li>
-                    <li>
-                        <p>Desmaios, câimbras e exaustão térmica</p>
-                    </li>
-                    <li>
-                        <p>Incêndios florestais e urbanos</p>
-                    </li>
-                    <li>
-                        <p>Sobrecarga e falhas na rede elétrica</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/visto-icon.png" alt="Prevenção" class="icone-titulo">Antes e Durante
-                    o Calor Intenso: Como se Prevenir
-                </h3>
-                <ul>
-                    <li>
-                        <p>Mantenha os ambientes ventilados ou com ventiladores e climatizadores</p>
-                    </li>
-                    <li>
-                        <p>Feche janelas e cortinas nas horas mais quentes para reduzir o aquecimento</p>
-                    </li>
-                    <li>
-                        <p>Evite o uso de muitos aparelhos elétricos ao mesmo tempo</p>
-                    </li>
-                    <li>
-                        <p>Armazene água potável e alimentos em local fresco</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/pessoas-icon.png" alt="Icone de pessoas" class="icone-titulo">Cuidados
-                    com o corpo
-                </h3>
-                <ul>
-                    <li>
-                        <p>Beba bastante água, mesmo sem sentir sede</p>
-                    </li>
-                    <li>
-                        <p>Use roupas leves, claras e de algodão</p>
-                    </li>
-                    <li>
-                        <p>Evite exercícios físicos entre 10h e 16h</p>
-                    </li>
-                    <li>
-                        <p>Use chapéu, óculos escuros e protetor solar com fator alto</p>
-                    </li>
-                    <li>
-                        <p>Reforce a hidratação de crianças, idosos e animais de estimação</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/sol-icon.png" alt="Durante" class="icone-titulo">Durante Ondas de
-                    Calor Extremas
-                </h3>
-                <strong>Se estiver em casa:</strong>
-                <ul>
-                    <li>
-                        <p>Mantenha-se em cômodos arejados ou escuros</p>
-                    </li>
-                    <li>
-                        <p>Reforce a ingestão de líquidos (água, sucos naturais, água de coco)</p>
-                    </li>
-                    <li>
-                        <p>Tome banhos frios ou use compressas de água gelada</p>
-                    </li>
-                    <li>
-                        <p>Evite refeições pesadas e comidas quentes</p>
-                    </li>
-                </ul>
-
-                <strong>Se estiver na rua:</strong>
-                <ul>
-                    <li>
-                        <p>Busque locais com sombra, árvores ou áreas climatizadas</p>
-                    </li>
-                    <li>
-                        <p>Use guarda-sol ou sombrinha</p>
-                    </li>
-                    <li>
-                        <p>Evite andar longas distâncias sob o sol</p>
-                    </li>
-                </ul>
-
-                <h3>
-                    <img src="assets/img/icones/sol-nuvem-icon.png" alt="Após" class="icone-titulo">Após o Pico de
-                    Calor
-                </h3>
-                <ul>
-                    <li>
-                        <p>Continue se hidratando por alguns dias</p>
-                    </li>
-                    <li>
-                        <p>Revise instalações elétricas e eletrodomésticos que foram sobrecarregados</p>
-                    </li>
-                    <li>
-                        <p>Reforce a ventilação da casa</p>
-                    </li>
-                    <li>
-                        <p>Fique atento à saúde de pessoas vulneráveis que possam ter sofrido efeitos tardios</p>
-                    </li>
-                </ul>
-
-                <button class="btn-fechar">Fechar</button>
-            </div>
-        </section>
+          <button class="btn-fechar">Fechar</button>
+        </div>
+      </section>
     </main>
 
     <div class="overlay" id="tela-autenticacao">
-        <div class="box">
-            <div class="tabs">
-                <button id="btn-login">Login</button>
-                <button id="btn-cadastro">Cadastro</button>
-            </div>
-
-
-            <form id="form-login" class="formulario">
-                <input type="text" id="login-usuario" placeholder="Usuário" required />
-                <input type="password" id="login-senha" placeholder="Senha" required />
-                <button type="submit">Entrar</button>
-            </form>
-
-            <form id="form-cadastro" class="formulario hidden">
-                <input type="text" id="cad-nome" placeholder="Nome completo" required />
-
-                <input type="text" id="cad-cpf" placeholder="CPF" required />
-                <span class="erro" id="erro-cpf"></span>
-
-                <input type="email" id="cad-email" placeholder="E-mail" />
-                <span class="erro" id="erro-email"></span>
-
-                <input type="date" id="cad-nascimento" required />
-
-                <input type="text" id="cad-usuario" placeholder="Usuário" required />
-
-                <input type="password" id="cad-senha" placeholder="Senha" required />
-                <small class="senha-dica">Use pelo menos 8 caracteres com letra maiúscula, minúscula, número e
-                    símbolo.</small>
-
-                <input type="password" id="cad-senhaconf" placeholder="Confirme sua Senha" required />
-                <span class="erro" id="erro-senha"></span>
-
-                <button type="submit">Cadastrar</button>
-            </form>
-
-
-            <button id="btn-anonimo" class="btn-anonimo">Entrar como Visitante</button>
-
-
+      <div class="box">
+        <div class="tabs">
+          <button id="btn-login">Login</button>
+          <button id="btn-cadastro">Cadastro</button>
         </div>
+
+        <form id="form-login" class="formulario">
+          <input
+            type="text"
+            id="login-usuario"
+            placeholder="Usuário"
+            required
+          />
+          <input
+            type="password"
+            id="login-senha"
+            placeholder="Senha"
+            required
+          />
+          <button type="submit">Entrar</button>
+        </form>
+
+        <form id="form-cadastro" class="formulario hidden">
+          <input
+            type="text"
+            id="cad-nome"
+            placeholder="Nome completo"
+            required
+          />
+
+          <input type="text" id="cad-cpf" placeholder="CPF" required />
+          <span class="erro" id="erro-cpf"></span>
+
+          <input type="email" id="cad-email" placeholder="E-mail" />
+          <span class="erro" id="erro-email"></span>
+
+          <input type="date" id="cad-nascimento" required />
+
+          <input type="text" id="cad-usuario" placeholder="Usuário" required />
+
+          <input type="password" id="cad-senha" placeholder="Senha" required />
+          <small class="senha-dica"
+            >Use pelo menos 8 caracteres com letra maiúscula, minúscula, número
+            e símbolo.</small
+          >
+
+          <input
+            type="password"
+            id="cad-senhaconf"
+            placeholder="Confirme sua Senha"
+            required
+          />
+          <span class="erro" id="erro-senha"></span>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+
+        <button id="btn-anonimo" class="btn-anonimo">
+          Entrar como Visitante
+        </button>
+      </div>
     </div>
 
     <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
-            <ul class="footer-links">
-                <li><a href="assets/contatos/contatos.html">Contato</a></li>
-                <li><a href="assets/faq/faq.html">FAQ</a></li>
-            </ul>
-        </div>
+      <div class="footer-container">
+        <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
+        <ul class="footer-links">
+          <li><a href="assets/contatos/contatos.html">Contato</a></li>
+          <li><a href="assets/faq/faq.html">FAQ</a></li>
+        </ul>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
