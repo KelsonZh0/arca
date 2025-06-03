@@ -6,7 +6,7 @@ const usuarios = [
 ];
 
 const pontosApoio = [
-  { nome: "Centro Comunitário Paulista", lat: -23.5505, lon: -46.6333 },
+  { nome: "Centro Comunitário Paulista", lat: -23.5689, lon: -46.6426 },
   { nome: "Igreja de São Paulo", lat: -23.5605, lon: -46.6533 },
   { nome: "Escola Primária Maputo", lat: -25.9753, lon: 32.5992 },
   { nome: "Centro Cultural Paris 14", lat: 48.9566, lon: 2.4522 }
@@ -106,7 +106,7 @@ function simular(tipo = 'nenhum') {
   alerta.style.color = conf.cor;
   nome.textContent = apoio.nome;
   endereco.innerHTML = `Local sugerido com base em sua localização.<br>Lat: ${apoio.lat.toFixed(4)}<br>Lon: ${apoio.lon.toFixed(4)}`;
-mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXXXXXXXXXEXEMPLO&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
+mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyByteZ_u1h_qeQTE-bgaNT1K0my9LxS86g&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
 
   mapa.classList.remove('oculto');
 
