@@ -107,7 +107,7 @@ function simular(tipo = 'nenhum') {
   nome.textContent = apoio.nome;
 const distancia = calcularDistancia(usuario.lat, usuario.lon, apoio.lat, apoio.lon).toFixed(2);
 endereco.innerHTML = `O ponto de apoio mais próximo é <strong>${apoio.nome}</strong>, a aproximadamente <strong>${distancia} km</strong> de distância da sua localização.`;
-mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyByteZ_u1h_qeQTE-bgaNT1K0my9LxS86g&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
+mapa.src = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXXXXXXXXXEXEMPLO&origin=${usuario.lat},${usuario.lon}&destination=${apoio.lat},${apoio.lon}&zoom=13`;
 
   mapa.classList.remove('oculto');
 
