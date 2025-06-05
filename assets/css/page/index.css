@@ -6,10 +6,9 @@ main {
   gap: 24px;
 }
 
-
 /* === Boas-vindas === */
 .container {
-  background-color: #BBDEFB;
+  background-color: #bbdefb;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(30, 58, 95, 0.2);
@@ -32,7 +31,7 @@ main {
 
 /* === Importância de estar preparado === */
 .alerta-section {
-  background-color: #E1F5FE;
+  background-color: #e1f5fe;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(30, 58, 95, 0.15);
@@ -62,11 +61,9 @@ main {
   width: 100%;
 }
 
-
-
 /* Card individual */
 .card {
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(30, 58, 95, 0.15);
   text-align: center;
@@ -96,38 +93,22 @@ main {
 
 /* === Seções de Detalhes Ocultas === */
 .detalhe-desastre {
+  display: none; /* Começa oculta */
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000; /* Importante: garante que fique acima de tudo */
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  display: none;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  padding: 40px 20px;
 }
 
 .detalhe-desastre.visivel {
   display: flex;
   animation: aparecer 0.3s ease-in-out;
-}
-
-.card-conteudo {
-  background-color: #f0f9ff;
-  border-radius: 12px;
-  padding: 24px;
-  max-width: 800px;
-  width: 100%;
-  color: #1e3a5f;
-  font-size: 16px;
-  line-height: 1.6;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
-  max-height: 90vh;
-  position: relative;
 }
 
 @keyframes aparecer {
@@ -141,65 +122,21 @@ main {
   }
 }
 /* === Estilo base para todas as seções de desastre === */
-.detalhe-desastre .card-conteudo {
-  background-color: #f0f9ff;
+.card-conteudo {
+  background-color: #eaf6ff; /* Preferível por estar em uso mais amplo */
   border-radius: 12px;
   padding: 32px;
   max-width: 800px;
   width: 100%;
-  color: #1e3a5f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Tom mais escuro dá mais profundidade */
+  color: #0d355f;
+  font-family: "Atkinson Hyperlegible", "Source Sans Pro", "Roboto", Arial,
+    sans-serif;
   font-size: 16px;
-  line-height: 1.6;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  line-height: 1.7;
   overflow-y: auto;
   max-height: 90vh;
   position: relative;
-}
-
-/* Título principal */
-.card-conteudo h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: #0d47a1;
-  display: flex;
-  align-items: center;
-}
-
-/* Subtítulos */
-.card-conteudo h3 {
-  font-size: 20px;
-  margin-top: 24px;
-  margin-bottom: 12px;
-  color: #1565c0;
-  display: flex;
-  align-items: center;
-}
-
-/* Listas e itens */
-.card-conteudo ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 16px;
-}
-
-.card-conteudo li {
-  margin-bottom: 8px;
-}
-
-/* Destaques com <strong> */
-.card-conteudo strong {
-  display: block;
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 17px;
-  color: #0d47a1;
-}
-
-/* Ícones ao lado do título */
-.icone-titulo {
-  width: 24px;
-  vertical-align: middle;
-  margin-right: 8px;
 }
 
 /* Botão fechar */
@@ -219,18 +156,6 @@ main {
   background-color: #0d47a1;
 }
 
-/* === Estilo visual inspirado no infográfico === */
-.card-conteudo {
-  background-color: #eaf6ff;
-  border-radius: 12px;
-  padding: 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  color: #0d355f;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
 .card-conteudo h2 {
   font-size: 26px;
   color: #0d47a1;
@@ -240,7 +165,7 @@ main {
 }
 
 .card-conteudo h3 {
-  background-color: #BBDEFB;
+  background-color: #bbdefb;
   padding: 10px 16px;
   border-radius: 8px;
   font-size: 20px;
@@ -268,6 +193,7 @@ main {
   position: relative;
   padding-left: 24px;
   margin-bottom: 12px;
+  text-align: justify;
 }
 
 .card-conteudo ul li::before {
@@ -293,10 +219,8 @@ main {
   margin-bottom: 12px;
   text-align: justify;
 }
-
-/* Small devices (≥600px) */
 @media (min-width: 600px) {
-    main {
+  main {
     padding: 220px 20px 40px;
   }
   .home-title {

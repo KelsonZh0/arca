@@ -6,7 +6,8 @@ main {
 }
 
 .faq-title {
-  color: #1e3a5f; /* Azul escuro */
+  color: #1e3a5f;
+  /* Azul escuro */
   font-size: 26px;
   margin-bottom: 10px;
   text-align: center;
@@ -14,13 +15,15 @@ main {
 
 .faq-subtitle {
   font-size: 16px;
-  color: #2196f3; /* Azul padrão */
+  color: #2196f3;
+  /* Azul padrão */
   margin-bottom: 20px;
   text-align: center;
 }
 
 .container {
-  background-color: #f0f9ff; /* Fundo azul clarinho */
+  background-color: #f0f9ff;
+  /* Fundo azul clarinho */
   padding: 20px;
   border-radius: 12px;
   max-width: 80%;
@@ -36,7 +39,6 @@ main {
   margin: auto;
 }
 
-
 .faq {
   margin-bottom: 16px;
   border-radius: 12px;
@@ -50,7 +52,7 @@ main {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(30, 136, 229, 0.25);
   background-color: #bbdefb;
-  }
+}
 
 .faq h3 {
   padding: 10px 14px;
@@ -68,7 +70,6 @@ main {
   transform: scale(1.08);
 }
 
-
 .faq p {
   display: none;
   padding: 10px 14px;
@@ -82,4 +83,124 @@ main {
 
 .faq.active p {
   display: block;
+}
+
+/* Small devices (≥600px) */
+@media (min-width: 600px) {
+  main {
+    padding: 220px 20px 40px;
+  }
+
+  .faq-title {
+    font-size: 26px;
+  }
+
+  .faq-subtitle {
+    font-size: 18px;
+  }
+
+  .faq h3 {
+    font-size: 19px;
+  }
+
+  .faq p {
+    font-size: 17px;
+  }
+
+  .container {
+    padding: 24px;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  main {
+    padding: 240px 20px 40px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-subtitle {
+    font-size: 20px;
+  }
+
+  .faq h3 {
+    font-size: 20px;
+  }
+
+  .faq p {
+    font-size: 18px;
+  }
+
+  .faq-section {
+    max-width: 700px;
+  }
+
+  .container {
+    max-width: 75%;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  main {
+    padding: 180px 40px 40px;
+  }
+
+  .faq-title {
+    font-size: 30px;
+  }
+
+  .faq-subtitle {
+    font-size: 22px;
+  }
+
+  .faq h3 {
+    font-size: 22px;
+  }
+
+  .faq p {
+    font-size: 19px;
+  }
+
+  .faq-section {
+    max-width: 800px;
+  }
+
+  .container {
+    max-width: 65%;
+  }
+}
+
+/* Extra-Large devices (≥1300px) */
+@media (min-width: 1300px) {
+  main {
+    padding: 200px 80px 40px;
+  }
+
+  .faq-title {
+    font-size: 32px;
+  }
+
+  .faq-subtitle {
+    font-size: 24px;
+  }
+
+  .faq h3 {
+    font-size: 24px;
+  }
+
+  .faq p {
+    font-size: 20px;
+  }
+
+  .faq-section {
+    max-width: 900px;
+  }
+
+  .container {
+    max-width: 55%;
+  }
 }

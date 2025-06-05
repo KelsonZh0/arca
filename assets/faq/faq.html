@@ -1,117 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/faq.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/page/faq.css">
-    
-    <title>Document</title>
+    <title>Pagina faq A.R.C.A</title>
     <script defer src="../js/faq.js"></script>
-</head>
+    <script defer src="../js/logout.js"></script>
+    <script defer src="../js/bot.js"></script>
+  </head>
 
-<body>
+  <body>
     <header>
+      <div class="logo">
+        <img src="../img/icones/arca.png" alt="Logo A.R.C.A" />
+      </div>
 
-        <div class="profile">
-            <h2>Olá, <span id="nome-usuario">visitante</span>!</h2>
+      <div class="profile">
+        <h2>Olá, <span id="nome-usuario">Visitante</span>!</h2>
+        <div class="logout-wrapper">
+          <button id="btn-logout" class="btn-logout">Sair</button>
         </div>
-        <div class="logo">
-            <a href="../../index.html">
-                <img src="../img/icones/arca.png" alt="Logo A.R.C.A" />
-            </a>
-        </div>
-        
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="../../index.html">Página Inicial</a></li>
-                <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
-                <li><a href="../contatos/contatos.html">Contatos</a></li>
-            </ul>
-        </nav>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="../../index.html">Página Inicial</a></li>
+          <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
+          <li><a href="../contato/contato.html">Contatos</a></li>
+          <li><a href="../solucao/solucao.html">Solução</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <div class="container">
-            <h1 class="faq-title">Perguntas Frequentes (FAQ)</h1>
-            <p class="faq-subtitle">Encontre respostas rápidas sobre a A.R.C.A</p>
+      <div class="container">
+        <h1 class="faq-title">Perguntas Frequentes (FAQ)</h1>
+        <p class="faq-subtitle">Encontre respostas rápidas sobre a A.R.C.A</p>
 
-            <div class="faq-section">
-                <div class="faq">
-                    <h3>O que é o A.R.C.A.?</h3>
-                    <p>A.R.C.A. (Alerta de Risco Climático e Apoio) é um aplicativo mobile desenvolvido como projeto
-                        acadêmico para fornecer suporte informativo e preventivo durante eventos climáticos extremos,
-                        como chuvas intensas, enchentes, ventos fortes e ondas de calor.</p>
-                </div>
-                <div class="faq">
-                    <h3>Como o aplicativo detecta riscos climáticos?</h3>
-                    <p>O A.R.C.A. simula a integração com dados meteorológicos públicos, como os fornecidos por órgãos
-                        como INMET e Defesa Civil. A ideia é ilustrar, de forma didática, como um app pode identificar
-                        condições climáticas adversas e apresentar alertas ao usuário com base em sua localização.</p>
-                </div>
-                <div class="faq">
-                    <h3>Que tipo de alertas o A.R.C.A. envia?</h3>
-                    <p>O sistema emite alertas simulados com três níveis de gravidade:
+        <div class="faq-section">
+          <div class="faq">
+            <h3>O que é o A.R.C.A.?</h3>
+            <p>
+              A.R.C.A. (Alerta de Risco Climático e Apoio) é um aplicativo
+              mobile desenvolvido como projeto acadêmico para fornecer suporte
+              informativo e preventivo durante eventos climáticos extremos, como
+              chuvas intensas, enchentes, ventos fortes e ondas de calor.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Como o aplicativo detecta riscos climáticos?</h3>
+            <p>
+              O A.R.C.A. simula a integração com dados meteorológicos públicos,
+              como os fornecidos por órgãos como INMET e Defesa Civil. A ideia é
+              ilustrar, de forma didática, como um app pode identificar
+              condições climáticas adversas e apresentar alertas ao usuário com
+              base em sua localização.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Que tipo de alertas o A.R.C.A. envia?</h3>
+            <p>
+              O sistema emite alertas simulados com três níveis de gravidade:
+              Informativo Atenção Alerta máximo Cada um inclui orientações
+              simples para segurança e proteção da saúde, como evitar exposição
+              ao sol, buscar abrigo ou não sair de casa.
+            </p>
+          </div>
 
-                        Informativo
-
-                        Atenção
-
-                        Alerta máximo
-
-                        Cada um inclui orientações simples para segurança e proteção da saúde, como evitar exposição ao
-                        sol, buscar abrigo ou não sair de casa.
-                </div>
-                <div class="faq">
-                    <h3>Preciso estar conectado à internet para usar o app?</h3>
-                    <p>Não necessariamente. O A.R.C.A. conta com um modo offline, que exibe informações básicas e
-                        instruções de segurança mesmo sem conexão. No entanto, os alertas em tempo real e atualizações
-                        meteorológicas só funcionam com acesso à internet.</p>
-                </div>
-                <div class="faq">
-                    <h3>O A.R.C.A. é acessível para pessoas com deficiência?</h3>
-                    <p>Sim. Um dos objetivos do projeto é promover a acessibilidade. Por isso, foram incluídas
-                        notificações por voz e uma interface simples para facilitar o uso por pessoas com deficiência
-                        visual.</p>
-                </div>
-                <div class="faq">
-                    <h3>Qual o impacto esperado com esse projeto?</h3>
-                    <p>Assim que você abre o app, ele verifica a sua localização e consulta os dados meteorológicos
-                        simulados. Caso haja risco detectado (chuva intensa, ventos fortes ou calor extremo), você verá
-                        um alerta em destaque na tela inicial, com orientações claras sobre como agir.</p>
-                </div>
-                <div class="faq">
-                    <h3>Como recebo os alertas climáticos no app?</h3>
-                    <p>O objetivo principal é conscientizar a população sobre os riscos climáticos e mostrar, de forma
-                        prática, como a tecnologia pode ser usada para prevenir desastres e proteger vidas,
-                        principalmente em áreas vulneráveis.</p>
-                </div>
-                <div class="faq">
-                    <h3>O que devo fazer quando recebo um alerta?</h3>
-                    <p>Cada alerta vem com instruções específicas de segurança. Por exemplo:
-
-                        Se for alerta de chuva forte: “Evite áreas alagadas e desligue aparelhos eletrônicos em caso de
-                        enchente.”
-
-                        Se for alerta de calor extremo: “Hidrate-se e permaneça em ambientes frescos.”
-
-                        O app também pode exibir mapas com rotas seguras ou locais de abrigo.</p>
-                </div>
-            </div>
+          <div class="faq">
+            <h3>Preciso estar conectado à internet para usar o app?</h3>
+            <p>
+              Não necessariamente. O A.R.C.A. conta com um modo offline, que
+              exibe informações básicas e instruções de segurança mesmo sem
+              conexão. No entanto, os alertas em tempo real e atualizações
+              meteorológicas só funcionam com acesso à internet.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>O A.R.C.A. é acessível para pessoas com deficiência?</h3>
+            <p>
+              Sim. Um dos objetivos do projeto é promover a acessibilidade. Por
+              isso, foram incluídas notificações por voz e uma interface simples
+              para facilitar o uso por pessoas com deficiência visual.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Qual o impacto esperado com esse projeto?</h3>
+            <p>
+              Assim que você abre o app, ele verifica a sua localização e
+              consulta os dados meteorológicos simulados. Caso haja risco
+              detectado (chuva intensa, ventos fortes ou calor extremo), você
+              verá um alerta em destaque na tela inicial, com orientações claras
+              sobre como agir.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>Como recebo os alertas climáticos no app?</h3>
+            <p>
+              O objetivo principal é conscientizar a população sobre os riscos
+              climáticos e mostrar, de forma prática, como a tecnologia pode ser
+              usada para prevenir desastres e proteger vidas, principalmente em
+              áreas vulneráveis.
+            </p>
+          </div>
+          <div class="faq">
+            <h3>O que devo fazer quando recebo um alerta?</h3>
+            <p>
+              Cada alerta vem com instruções específicas de segurança. Por
+              exemplo: Se for alerta de chuva forte: “Evite áreas alagadas e
+              desligue aparelhos eletrônicos em caso de enchente.” Se for alerta
+              de calor extremo: “Hidrate-se e permaneça em ambientes frescos.” O
+              app também pode exibir mapas com rotas seguras ou locais de
+              abrigo.
+            </p>
+          </div>
         </div>
-
+      </div>
     </main>
-</body>
-<footer class="footer">
-    <div class="footer-container">
+    <footer class="footer">
+      <div class="footer-container">
         <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
         <ul class="footer-links">
-            <li><a href="../contatos/contatos.html">Contato</a></li>
-            <li><a href="../faq/faq.html">FAQ</a></li>
+          <li><a href="../contato/contato.html">Contato</a></li>
+          <li><a href="../faq/faq.html">FAQ</a></li>
         </ul>
-    </div>
-</footer>
-
+      </div>
+    </footer>
+  </body>
 </html>

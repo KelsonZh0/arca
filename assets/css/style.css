@@ -30,6 +30,35 @@ header {
 }
 
 /* === ELEMENTOS BASE === */
+
+.btn-logout {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 10px;
+  font-size: 13px;
+  background: none;
+  color: #1e3a5f;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.btn-logout::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #1e3a5f;
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-logout:hover::after {
+  width: 100%;
+}
 .profile {
   font-size: 16px;
   color: #1e3a5f;
@@ -175,7 +204,6 @@ header {
 
   .logo {
     order: 2;
-    flex: 1;
     justify-content: center;
   }
 
@@ -193,7 +221,7 @@ header {
   }
 
   .nav-bar ul {
-    gap: 40px;
+    gap: 20px;
   }
 
   .nav-bar a {

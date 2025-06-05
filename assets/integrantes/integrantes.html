@@ -1,165 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">    
-    <link rel="stylesheet" href="../css/page/integrantes.css">
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/page/integrantes.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <title>Integrantes</title>
 
-    <title>Pagina inicial A.R.C.A</title>
-
-    <script defer src="../js/integrandes.js"></script>
-
+  <script defer src="../js/integrantes.js"></script>
+  <script defer src="../js/logout.js"></script>
+  <script defer src="../js/bot.js"></script>
 </head>
+
 <body>
-    <header>
+  <header>
+    <div class="logo">
+      <img src="../img/icones/arca.png" alt="Logo A.R.C.A" />
+    </div>
 
-        <div class="profile">
-            <h2>Olá, <span id="nome-usuario">visitante</span>!</h2>
+    <div class="profile">
+      <h2>Olá, <span id="nome-usuario">Visitante</span>!</h2>
+      <div class="logout-wrapper">
+        <button id="btn-logout" class="btn-logout">Sair</button>
+      </div>
+    </div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="../../index.html">Página inicial</a></li>
+        <li><a href="../contatos/contatos.html">Contato</a></li>
+        <li><a href="../faq/faq.html">FAQ</a></li>
+        <li><a href="../solucao/solucao.html">Solução</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <ul class="integrantes">
+      <!-- Alexander -->
+      <li class="cartao-integrante ativo">
+        <div class="cartao-topo">
+          <div class="cartao-imagem">
+            <img src="../img/integrantes/alexander.jpg" alt="Imagem do aluno" />
+          </div>
+          <div class="detalhes">
+            <h2 class="nome">Alexander Dennis Isidro Mamani</h2>
+            <span class="rm">RM 565554</span>
+            <div class="links-sociais">
+              <a href="https://www.linkedin.com/in/alexander-dennis-a3b48824b/" target="_blank" aria-label="Perfil no linkedIn de Alexander"
+                title="linkedIn de Alexander">
+                <img src="../img/icones/linkedin.png" alt="linkedIn" />
+              </a>
+              <a href="https://github.com/KelsonZh0" target="_blank" aria-label="Perfil no GitHub de Alexander"
+                title="GitHub de Alexander">
+                <img alt="GitHub" src="../img/icones/github.png">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="logo">
-            <a href="../../index.html">
-                <img src="../img/icones/arca.png" alt="Logo A.R.C.A" />
-            </a>
+        <div class="sobre">
+          <h3>Descrição</h3>
+          <p>
+            Sou um jovem dedicado, com perfil analítico e criativo, em
+            constante busca por crescimento pessoal e profissional.
+            Atualmente, curso Análise e Desenvolvimento de Sistemas na FIAP e
+            tenho grande interesse na área de desenvolvimento back-end, onde
+            pretendo construir minha carreira. Tenho forte afinidade com
+            tecnologia e programação, e gosto de explorar diferentes
+            linguagens e ferramentas de desenvolvimento. Adoto uma abordagem
+            flexível e focada na resolução de problemas, com facilidade para
+            aprender novas tecnologias e aplicar o conhecimento de forma
+            prática. Busco oportunidades em ambientes desafiadores, onde possa
+            contribuir de forma significativa para projetos e equipes, ao
+            mesmo tempo em que expando minhas habilidades e conhecimentos.
+          </p>
         </div>
+      </li>
 
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="../../index.html">Página inicial</a></li>
-                <li><a href="../contatos/contatos.html">Contato</a></li>
-                <li><a href="../faq/faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <ul class="integrantes">
-            <!-- Alexander -->
-            <li class="cartao-integrante ativo">
-                <div class="cartao-topo">
-                    <div class="cartao-imagem">
-                        <img src="../img/integrantes/alexander.jpg" alt="Imagem do aluno" />
-                    </div>
-                    <div class="detalhes">
-                        <h2 class="nome">Alexander Dennis Isidro Mamani</h2>
-                        <span class="rm">RM 565554</span>
-                        <div class="links-sociais">
-                            <a href="https://www.linkedin.com/in/alexander-dennis-a3b48824b/" target="_blank">
-                                <img src="../img/icones/linkedin.png" alt="linkedIn">
-                            </a>
-                            <a href="https://github.com/alex-isidro" target="_blank">
-                                <img src="../img/icones/github.png" alt="GitHub">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sobre">
-                    <h3>Descrição</h3>
-                    <p>Sou um jovem dedicado, com perfil analítico e criativo, em constante busca por crescimento
-                        pessoal e profissional. Atualmente, curso Análise e Desenvolvimento de Sistemas na FIAP e
-                        tenho
-                        grande interesse na área de desenvolvimento back-end, onde pretendo construir minha
-                        carreira.
-                        Tenho forte afinidade com tecnologia e programação, e gosto de explorar diferentes
-                        linguagens e
-                        ferramentas de desenvolvimento. Adoto uma abordagem flexível e focada na resolução de
-                        problemas,
-                        com facilidade para aprender novas tecnologias e aplicar o conhecimento de forma prática.
-                        Busco
-                        oportunidades em ambientes desafiadores, onde possa contribuir de forma significativa para
-                        projetos e equipes, ao mesmo tempo em que expando minhas habilidades e conhecimentos.</p>
-                </div>
-            </li>
+      <!-- Kelson -->
+      <li class="cartao-integrante">
+        <div class="cartao-topo">
+          <div class="cartao-imagem">
+            <img src="../img/integrantes/kelson-zhang.jpg" alt="Imagem do aluno" />
+          </div>
+          <div class="detalhes">
+            <h2 class="nome">Kelson Zhang</h2>
+            <span class="rm">RM 563748</span>
+            <div class="links-sociais">
+              <a href="https://www.linkedin.com/in/kelson-zhang-211456323/" target="_blank"
+                aria-label="Perfil no linkedIn de Kelson" title="linkedIn de Kelson">
+                <img src="../img/icones/linkedin.png" alt="linkedIn" />
+              </a>
+              <a href="https://github.com/KelsonZh0" target="_blank" aria-label="Perfil no GitHub de Kelson"
+                title="GitHub de Kelson">
+                <img alt="GitHub" src="../img/icones/github.png">
+              </a>
 
-            <!-- Kelson -->
-            <li class="cartao-integrante">
-                <div class="cartao-topo">
-                    <div class="cartao-imagem">
-                        <img src="../img/integrantes/kelson-zhang.jpg" alt="Imagem do aluno" />
-                    </div>
-                    <div class="detalhes">
-                        <h2 class="nome">Kelson Zhang</h2>
-                        <span class="rm">RM 563748</span>
-                        <div class="links-sociais">
-                            <a href="https://www.linkedin.com/in/kelson-zhang-211456323/" target="_blank">
-                                <img src="../img/icones/linkedin.png" alt="linkedIn">
-
-                            </a> <a href="https://github.com/KelsonZh0" target="_blank">
-                                <img src="../img/icones/github.png" alt="GitHub">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sobre">
-                    <h3>Descrição</h3>
-
-                    <p>Com início na área de gastronomia, desenvolvi minha carreira voltada para a gestão de
-                        alimentos e
-                        bebidas, com experiência em coordenação de equipes e controle de qualidade. Atuei na startup
-                        Eatopia, referência nacional em cozinhas para delivery, e posteriormente integrei a equipe
-                        responsável pelo serviço premium de A&B do Allianz Parque, onde aperfeiçoei habilidades em
-                        liderança, trabalho em equipe e gestão de compras. Atualmente, estou em transição para a
-                        área de
-                        tecnologia, cursando TADS na FIAP e especializando-me em desenvolvimento web por meio do
-                        curso
-                        DevQuest Full-Stack. Sou movido por curiosidade, disciplina e desejo constante de
-                        aprendizado e
-                        crescimento profissional.</p>
-                </div>
-            </li>
-
-            <!-- Lucas -->
-            <li class="cartao-integrante">
-                <div class="cartao-topo">
-                    <div class="cartao-imagem">
-                        <img src="../img/integrantes/lucas-rossoni.png" alt="Imagem do aluno" />
-                    </div>
-                    <div class="detalhes">
-                        <h2 class="nome">Lucas Rossoni Dieder</h2>
-                        <span class="rm">RM 563770</span>
-                        <div class="links-sociais">
-                            <a href="https://www.linkedin.com/in/lucas-rossoni-dieder-32242a353/" target="_blank">
-                                <img src="../img/icones/linkedin.png" alt="linkedIn">
-
-                            </a><a href="https://github.com/PxS00" target="_blank">
-                                <img src="../img/icones/github.png" alt="GitHub">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sobre">
-                    <h3>Descrição</h3>
-
-                    <p>Gaúcho, 19 anos e estudante de Análise e Desenvolvimento de Sistemas na FIAP, apaixonado por
-                        tecnologia, inovação e desenvolvimento de soluções que realmente gerem impacto na vida das
-                        pessoas.
-                        Atualmente, atua no desenvolvimento de projetos que envolvem programação, banco de dados,
-                        inteligência artificial e desenvolvimento web, sempre em busca de aprimoramento técnico e
-                        profissional.
-                        Gosta de desafios, de aprender e de colaborar, carregando consigo a essência do gaúcho:
-                        determinação, resiliência e espírito de equipe. No Challenge 2025, participa ativamente da
-                        criação de soluções voltadas à inclusão digital e à melhoria da experiência dos usuários na
-                        saúde, unindo tecnologia, empatia e propósito.</p>
-                </div>
-            </li>
-
-        </ul>
-        <button id="btn-proximo">Próximo</button>
-    </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
-            <ul class="footer-links">
-                <li><a href="../contatos/contatos.html">Contato</a></li>
-                <li><a href="../faq/faq.html">FAQ</a></li>
-            </ul>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="sobre">
+          <h3>Descrição</h3>
+
+          <p>
+            Com início na área de gastronomia, desenvolvi minha carreira
+            voltada para a gestão de alimentos e bebidas, com experiência em
+            coordenação de equipes e controle de qualidade. Atuei na startup
+            Eatopia, referência nacional em cozinhas para delivery, e
+            posteriormente integrei a equipe responsável pelo serviço premium
+            de A&B do Allianz Parque, onde aperfeiçoei habilidades em
+            liderança, trabalho em equipe e gestão de compras. Atualmente,
+            estou em transição para a área de tecnologia, cursando TADS na
+            FIAP e especializando-me em desenvolvimento web por meio do curso
+            DevQuest Full-Stack. Sou movido por curiosidade, disciplina e
+            desejo constante de aprendizado e crescimento profissional.
+          </p>
+        </div>
+      </li>
+
+      <!-- Lucas -->
+      <li class="cartao-integrante">
+        <div class="cartao-topo">
+          <div class="cartao-imagem">
+            <img src="../img/integrantes/lucas-rossoni.png" alt="Imagem do aluno" />
+          </div>
+          <div class="detalhes">
+            <h2 class="nome">Lucas Rossoni Dieder</h2>
+            <span class="rm">RM 563770</span>
+            <div class="links-sociais">
+              <a href="https://www.linkedin.com/in/lucas-rossoni-dieder-32242a353/" target="_blank" aria-label="Perfil no linkedIn do Lucas"
+                title="linkedIn do Lucas">
+                <img src="../img/icones/linkedin.png" alt="linkedIn" /> 
+              </a>
+                
+                <a href="https://github.com/PxS00"
+                target="_blank" aria-label="Perfil no GitHub do Lucas"
+                title="GitHub do Lucas">
+                <img src="../img/icones/github.png" alt="GitHub"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="sobre">
+          <h3>Descrição</h3>
+
+          <p>
+            Gaúcho de 19 anos e estudante da FIAP, tenho como propósito usar a
+            tecnologia para enfrentar desafios reais e construir soluções que
+            impactem positivamente a sociedade. Acredito que a inovação é
+            ainda mais poderosa quando aplicada com empatia, propósito e
+            consciência social.Add commentMore actions Atuo em projetos que
+            envolvem programação, inteligência artificial, banco de dados e
+            desenvolvimento web, sempre buscando unir criatividade,
+            responsabilidade e impacto. Na Global Solution 2025, contribuo com
+            uma solução voltada à prevenção e resposta a eventos extremos da
+            natureza, unindo tecnologia e resiliência para proteger pessoas em
+            situações críticas. Carrego comigo a essência gaúcha: força, foco
+            e espírito de colaboração.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <button id="btn-proximo">Próximo</button>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
+      <ul class="footer-links">
+        <li><a href="../contato/contato.html">Contato</a></li>
+        <li><a href="../faq/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>

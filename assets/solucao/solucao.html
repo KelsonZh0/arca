@@ -1,76 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A.R.C.A. - Simulação de Alertas</title>
+    <link rel="stylesheet" href="../css/page/solucao.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A.R.C.A. - Simulação de Alertas</title>
-  <link rel="stylesheet" href="../css/page/solucao.css" />
-</head>
+    <script defer src="../js/logout.js"></script>
+    <script defer src="../js/solucao.js"></script>
+    <script defer src="../js/bot.js"></script>
+  </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <a href="../../index.html">
+  <body>
+    <header>
+      <div class="logo">
         <img src="../img/icones/arca.png" alt="Logo A.R.C.A" />
-      </a>
-    </div>
-  </header>
-
-  <main>
-
-    <div class="alert-box" id="mensagem-alerta">
-      <img src="../img/icones/clear-sky.png" alt="Ícone de alerta" id="icone-alerta" class="icone-alerta">
-      <p id="texto-alerta">Nenhum alerta no momento.</p>
-    </div>
-
-    <div class="apoio-card">
-      <div class="apoio-header">
-        <img src="../img/icones/pin.png" alt="ponto e mapa" class="icone-pin">
-        <h2>Ponto de Apoio</h2>
       </div>
 
-      <h3 id="nome-escola">Nenhum ponto selecionado</h3>
-      <p id="endereco">---</p>
-<iframe id="mapa-imagem" class="mapa" width="100%" height="250" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="profile">
+        <h2>Olá, <span id="nome-usuario">Visitante</span>!</h2>
+        <div class="logout-wrapper">
+          <button id="btn-logout" class="btn-logout">Sair</button>
+        </div>
+      </div>
 
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="../../index.html">Página inicial</a></li>
+          <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
+          <li><a href="../contatos/contatos.html">Contato</a></li>
+          <li><a href="../faq/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="alert-box" id="mensagem-alerta">
+        <img
+          src="../img/icones/clear-sky.png"
+          alt="Ícone de alerta"
+          id="icone-alerta"
+          class="icone-alerta"
+        />
+        <p id="texto-alerta">Nenhum alerta no momento.</p>
+      </div>
+
+      <div class="apoio-card">
+        <div class="apoio-header">
+          <img
+            src="../img/icones/pin.png"
+            alt="ponto e mapa"
+            class="icone-pin"
+          />
+          <h2>Ponto de Apoio</h2>
+        </div>
+
+        <h3 id="nome-escola">Nenhum ponto selecionado</h3>
+        <p id="endereco">---</p>
+        <iframe
+          id="mapa-imagem"
+          class="mapa"
+          width="100%"
+          height="250"
+          style="border: 0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="botoes-simulacao">
+        <button onclick="simular('enchente')">Simular Enchente</button>
+        <button onclick="simular('alagamento')">Simular Alagamento</button>
+        <button onclick="simular('calor')">Simular Calor Extremo</button>
+        <button onclick="simular('vento')">Simular Ventos Fortes</button>
+      </div>
+    </main>
+
+    <div id="modal-agua" class="modal oculto">
+      <div class="modal-conteudo">
+        <h2 class="titulo-alerta">
+          <img
+            src="../img/icones/calor-extremo-icon.png"
+            alt="Ícone de calor extremo"
+            class="icone-titulo"
+          />
+          Calor Extremo
+        </h2>
+        <p>
+          Informe seu peso para calcular a quantidade ideal de água por dia:
+        </p>
+        <input type="number" id="input-peso" placeholder="Peso em kg" min="1" />
+        <button onclick="calcularAgua()">Calcular</button>
+        <p id="resultado-agua"></p>
+        <button class="fechar-modal" onclick="fecharModal()">Fechar</button>
+      </div>
     </div>
 
-    <div class="botoes-simulacao">
-      <button onclick="simular('enchente')">Simular Enchente</button>
-      <button onclick="simular('alagamento')">Simular Alagamento</button>
-      <button onclick="simular('calor')">Simular Calor Extremo</button>
-      <button onclick="simular('vento')">Simular Ventos Fortes</button>
-    </div>
-  </main>
-
-  <div id="modal-agua" class="modal oculto">
-    <div class="modal-conteudo">
-      <h2 class="titulo-alerta">
-        <img src="../img/icones/calor-extremo-icon.png" alt="Ícone de calor extremo" class="icone-titulo">
-        Calor Extremo
-      </h2>
-      <p>Informe seu peso para calcular a quantidade ideal de água por dia:</p>
-      <input type="number" id="input-peso" placeholder="Peso em kg" min="1" />
-      <button onclick="calcularAgua()">Calcular</button>
-      <p id="resultado-agua"></p>
-      <button class="fechar-modal" onclick="fecharModal()">Fechar</button>
-    </div>
-  </div>
-
-
-  <footer class="footer">
-    <div class="footer-container">
-      <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
-      <ul class="footer-links">
-        <li><a href="../contatos/contatos.html">Contato</a></li>
-        <li><a href="../faq/faq.html">FAQ</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="../js/solucao.js"></script>
-
-</body>
-
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 A.R.C.A . Todos os direitos reservados.</p>
+        <ul class="footer-links">
+          <li><a href="../contato/contato.html">Contato</a></li>
+          <li><a href="../faq/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
